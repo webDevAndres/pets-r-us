@@ -17,7 +17,7 @@ app.get('/', function(request, response) {
         appName: 'Pets-R-Us'
     });
 });
-app.get('/grooming', function(request, response) {
+app.get('/grooming.ejs', function(request, response) {
     response.render('index', {
         appTitle: 'Grooming',
         appName: 'Pets-R-Us'
