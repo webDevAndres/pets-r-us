@@ -4,8 +4,8 @@
   "description": "Bellevue web 340 Assignment 4 Pets-R-Us",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,6 @@
     "express": "^4.18.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.18"
   }
 }
