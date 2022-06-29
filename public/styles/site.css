@@ -5,8 +5,53 @@
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
-    background-color: orange;
 }
 
+#container {
+    margin-left: 24px;
+    margin-right: 24px;
+}
 
+h1 {
+    font-family: 'Montserrat', sans-serif;
+}
 
+section {
+    margin-bottom: 136px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-title {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.section-header {
+    margin-bottom: 32px;
+}
+
+#landingPageHeader {
+    width: 100%;
+    min-height: 50vh;
+}
+
+#dogOfWeek, #locations, #testimonials, #hours {
+    text-align: center;
+    min-height: 50vh;
+}
+
+#dogImage {
+    width: 143px;
+    height: 143px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4px;
+    box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.64);
+}
+
+#dogImage img {
+    object-fit: cover;
+}
