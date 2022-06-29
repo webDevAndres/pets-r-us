@@ -10,7 +10,7 @@ app.use(express.static(viewsPath));
 
 // routes to public folder
 let publicPath = path.resolve(__dirname,'public');
-app.use(express.static('public'));
+app.use(express.static('public/'));
 
 
 
