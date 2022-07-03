@@ -1,6 +1,15 @@
+:root {
+  /* elements */
+  --primary: #7fbdf5;
+  /* hovers  */
+  --secondary: #cae2f7;
+  /* borders,backgrounds */
+  --tertiary: #606b75;
+}
+
 /* Add a black background color to the top navigation */
 .mobile-menu {
-  background-color: #333;
+  background-color: var(--primary);
   overflow: hidden;
   position: fixed;
   bottom: 0;
@@ -15,11 +24,12 @@
 /* Style the links inside the navigation bar */
 .mobile-menu a {
   display: none;
-  color: #f2f2f2;
+  color: var(--tertiary);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 24px;
+  font-weight: bold;
 }
 
 .mobile-menu a.icon {
@@ -30,19 +40,14 @@
 
 /* Change the color of links on hover */
 .mobile-menu a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: var(--secondary);
+  color: #000000;
 }
 
 /* Add an active class to highlight the current page */
 .mobile-menu a.active {
-  background-color: #04aa6d; 
-  color: white;
-}
-
-.mobile-menu a:active{
-  background-color: #04aa6d; 
-  color: white;
+  background-color: var(--secondary); 
+  color: #000000;
 }
 
 .mobile-menu.responsive {

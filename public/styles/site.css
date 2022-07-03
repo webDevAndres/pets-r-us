@@ -1,14 +1,5 @@
 @import url(menu.css);
 
-:root {
-  /* elements */
-  --primary: #7fbdf5;
-  /* hovers  */
-  --secondary: #cae2f7;
-  /* borders,backgrounds */
-  --teriary: #606b75;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +8,7 @@
 
 body {
   font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
 }
 
 #container, #groomingContainer {
@@ -138,17 +130,26 @@ textarea {
 
 .submit-form {
   width: 100%;
-  background-color: #3c3c3c;
+  background-color: var(--tertiary);
   color: white;
   padding: 16px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
 }
+
+.submit-form:hover{
+    width: 100%;
+    background-color: var(--primary);
+    color: #000000;
+
+  }
 
 footer {
   height: 64px;
-  background-color: #606b75;
+  background-color: var(--tertiary);
 }
 
 /*====GROOMING PAGE CSS====================================*/
@@ -158,13 +159,27 @@ footer {
     gap: 24px;
 }
 
+.card {
+    position: relative;
+    padding-bottom: 50px;
+}
+
 .card img {
     width: 100%;
     height: 360px;
     object-fit: fill;
 }
 
+.grooming-service-title {
+    padding-bottom: 24px;
+}
 
+.grooming-service-price {
+    position: absolute;
+    bottom: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
 
 
 
@@ -219,7 +234,9 @@ footer {
 
 @media only screen and (min-width: 768px) {
   /* For desktop: */
-
+  body {
+    font-size: 24px;
+  }
   #groomingPageHeader {
     width: 100%;
     height: auto;
@@ -248,7 +265,7 @@ footer {
   }
 
   #cardContainer {
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto;
     margin-bottom: 32px;
     justify-content: center;
 }
@@ -257,5 +274,23 @@ footer {
     width: 100%;
     height: 220px;
     object-fit: fill;
+}
+
+#processDetails {
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+#contact {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (min-width: 768px) {
+    #cardContainer {
+        grid-template-columns: auto auto auto auto;
+    }
+
 }
 }
