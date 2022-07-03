@@ -40,6 +40,11 @@
   color: white;
 }
 
+.mobile-menu a:active{
+  background-color: #04aa6d; 
+  color: white;
+}
+
 .mobile-menu.responsive {
   width: 100%;
   height: auto;
