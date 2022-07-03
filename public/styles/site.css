@@ -1,57 +1,223 @@
+@import url(menu.css);
+
+:root {
+  /* elements */
+  --primary: #7fbdf5;
+  /* hovers  */
+  --secondary: #cae2f7;
+  /* borders,backgrounds */
+  --teriary: #606b75;
+}
+
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 #container {
-    margin-left: 24px;
-    margin-right: 24px;
-}
-
-h1 {
-    font-family: 'Montserrat', sans-serif;
-}
-
-section {
-    margin-bottom: 136px;
-}
-
-img {
-    width: 100%;
-    height: 100%;
-}
-
-.card-title {
-    font-family: 'Montserrat', sans-serif;
-}
-
-.section-header {
-    margin-bottom: 32px;
+  margin-top: 10%;
+  margin-left: 24px;
+  margin-right: 24px;
 }
 
 #landingPageHeader {
-    width: 100%;
-    min-height: 50vh;
+  width: 100%;
+  height: 50%;
+  position: relative;
+  text-align: center;
+}
+.landing-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-#dogOfWeek, #locations, #testimonials, #contact {
+.brand-logo {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  padding: 24px 32px;
+}
+
+.centered {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#intro,
+#dogOfWeek,
+#locations,
+#locationHours,
+#testimonials,
+#contact {
+  text-align: center;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+}
+
+section,
+#landingPageHeader {
+  margin-bottom: 136px;
+}
+
+.section-header {
+  margin-bottom: 32px;
+}
+
+.content-title {
+  font-family: "Montserrat", sans-serif;
+}
+
+.content-description p {
+  line-height: 24px;
+}
+
+.content-image img {
+  width: 143px;
+  height: 143px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4px;
+  box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.64);
+  object-fit: cover;
+}
+
+.content-description ul li {
+  list-style-type: none;
+}
+
+#displayHours p {
+  text-align: left;
+}
+
+#displayHours p:nth-last-child(n + 2) {
+  margin-bottom: 16px;
+}
+
+.daily-hours {
+  float: right;
+}
+
+.customer-quote {
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.profile-picture {
+  margin-top: 16px;
+}
+
+.contact-form {
+  text-align: left;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+.submit-form {
+  width: 100%;
+  background-color: #3c3c3c;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+footer {
+  height: 64px;
+  background-color: #606b75;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  #container {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-areas:
+      "intro intro"
+      "dogOfWeek dogOfWeek"
+      "locations locationHours"
+      "testimonials testimonials"
+      "contact contact";
+  }
+  #intro {
+    grid-area: intro;
+  }
+  #dogOfWeek {
+    grid-area: dogOfWeek;
+  }
+  #locations {
+    grid-area: locations;
+  }
+  #locationHours {
+    grid-area: locationHours;
+  }
+  #testimonials {
+    grid-area: testimonials;
+  }
+  #contact {
+    grid-area: contact;
+  }
+
+  
+
+
+  #displayHours .content-description p {
     text-align: center;
-    min-height: 50vh;
+  }
+  .daily-hours {
+    float: none;
+    padding-left: 32px;
+  }
 }
 
-#dogImage {
-    width: 143px;
-    height: 143px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 4px;
-    box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.64);
-}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
 
-#dogImage img {
-    object-fit: cover;
+  #landingPageHeader {
+    width: 100%;
+    height: auto;
+    position: relative;
+    text-align: center;
+  }
+
+  .brand-logo.centered {
+    position: relative;
+    top: initial;
+    left: initial;
+    transform: initial;
+    padding: initial;
+  }
+
+  .landing-image {
+    display: none;
+  }
+
+  .brand-logo {
+    width: 50%;
+    height: auto;
+  }
 }

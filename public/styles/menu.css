@@ -1,0 +1,82 @@
+/* Add a black background color to the top navigation */
+.mobile-menu {
+  background-color: #333;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  z-index: 999;
+}
+
+/* Style the links inside the navigation bar */
+.mobile-menu a {
+  display: none;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.mobile-menu a.icon {
+  display: block;
+  font-size: 32px;
+  margin: auto;
+}
+
+/* Change the color of links on hover */
+.mobile-menu a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add an active class to highlight the current page */
+.mobile-menu a.active {
+  background-color: #04aa6d; 
+  color: white;
+}
+
+.mobile-menu.responsive {
+  width: 100%;
+  height: auto;
+  border-radius: initial;
+  transform: translate(-50%, 0);
+  transition: width 1s ease-in-out;
+}
+
+.mobile-menu.responsive .icon {
+  position: relative;
+  float: right;
+}
+
+.mobile-menu.responsive a {
+  float: none;
+  display: block;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .mobile-menu {
+    position: relative;
+    bottom: initial;
+    left: initial;
+    transform: initial;
+    border-radius: initial;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    justify-content: flex-end;
+  }
+
+  .mobile-menu a {
+    display: inline;
+  }
+
+  .mobile-menu a.icon {
+    display: none;
+  }
+}
