@@ -25,63 +25,135 @@ Contact Us form. -->
     <!-- font awesome icons -->
     <script src="https://kit.fontawesome.com/8b2cac046d.js" crossorigin="anonymous"></script>
     <!-- global styles -->
-    <link rel="stylesheet" href="styles/site.css">
+    <link rel="stylesheet" href="/styles/site.css">
     <link rel="icon" href="/images/icon.png">
 </head>
 
 <body>
     <header>
-        <nav>
+        <nav class="mobile-menu" id="navigationContainer">
             <a href="index.html">Home</a>
             <a href="#">Boarding</a>
             <a href="grooming.html">Grooming</a>
             <a href="#">Training</a>
-            <div class="dropdown">
-                <button class="dropbtn">Login
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#">Register</a>
-                    <a href="#">Login</a>
-                </div>
-            </div>
+            <a href="#">Login</a>
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fas fa-bars" id="menuIcon"></i>
+            </a>
         </nav>
     </header>
-    <section id="landingPageHeader">
-        <img src="/images/LandingPageDog.jpeg" alt="dog">
-    </section>
+    <div id="landingPageHeader">
+        <img class="brand-logo centered" src="/images/Pets-R-Us.png" alt="logo" width="320" height="320">
+        <img class="landing-image " src="/images/LandingPageDog.jpeg" alt="dog">
+    </div>
     <div id="container">
-    <section id="dogOfWeek">
-        <h1 class="section-header">Dog of the Week</h1>
-        <div class="card-title">
-            <p>Ferdinand</p>
-        </div>
-        <div class="card">
-            <div class="card-content">
-                <div id="dogImage">
+        <section id="intro">
+            <h1 class="section-header">Our Promise to you.</h1>
+            <div class="section-content">
+                <div class="content-description">
+                    <p>We offer our clients expert pet grooming services at curbside convenience to your house or place
+                        of business. Our goal is to treat your pets with the same respect that we would expect for our
+                        own.</p>
+                </div>
+
+            </div>
+        </section>
+        <section id="dogOfWeek">
+            <h1 class="section-header">Dog of the Week</h1>
+            <div class="section-content">
+                <div class="content-title">
+                    <p>Ferdinand</p>
+                </div>
+                <div class="content-image">
                     <img src="/images/weekly-dog/week1.jpeg" height='143' alt="dog of the week">
                 </div>
-                <div class="description">
-                    <p>Loves playing with his squeaky chicken.</p>
-                    <p>Enjoys chasing squirrels.</p>
-                    <p>Likes mud baths after a rainy day.</p>
+                <div class="content-description">
+                    <p>I may not win any fetch awards, but I will definitely win your heart with my insane snuggling
+                        abilities. If snacking, snuggling, and watching sitcoms is your thing, we might be best friends.
+                    </p>
                 </div>
             </div>
-        </div>
-    </section>
-    <section id="locations">
-        <h1 class="section-header">Locations</h1>
-    </section>
-    <section id="testimonials">
-        <h1 class="section-header">Testimonials</h1>
-    </section>
-    <section id="contact">
-        <h1 class="section-header">Contact</h1>
-    </section>
-</div>
+        </section>
+        <section id="locations">
+            <h1 class="section-header">Locations</h1>
+            <div class="section-content">
+                <div class="content-description">
+                    <p>Established in the Omaha area in 2018. We have extensive experience. We enjoy caring for,
+                        connecting with, and building long-term relationships with animals. We make certain that your
+                        pet receives the best possible care and grooming experience. Visit us in one of our two
+                        locations.</p>
+                    <br>
+                    <p>Omaha, NE</p>
+                    <p>10000 California St Suite 1221, Omaha, NE 68114</p>
+                    <br>
+                    <p>Council Bluffs, IA</p>
+                    <p>3626 Metro Dr, IA 51501</p>
+                </div>
+            </div>
+        </section>
+        <section id="locationHours">
+            <h1 class="section-header">Store Hours</h1>
+            <div class="section-content" id="displayHours">
+                <div class="content-description">
+                    <p>Monday:<span class="daily-hours">7:30 AM - 3:30 PM</span></p>
+                    <p>Tuesday:<span class="daily-hours">7:30 AM - 3:30 PM</span></p>
+                    <p>Wednesday:<span class="daily-hours">7:30 AM - 3:30 PM</span></p>
+                    <p>Thursday:<span class="daily-hours">11:00 AM - 3:30 PM</span></p>
+                    <p>Friday:<span class="daily-hours">11:00 AM - 3:30 PM</span></p>
+                    <p>Saturday:<span class="daily-hours">8:00 AM - 3:30 PM</span></p>
+                    <p>Sunday:<span class="daily-hours">8:00 AM - 3:30 PM</span></p>
+                </div>
+            </div>
+        </section>
+        <section id="testimonials">
+            <h1 class="section-header">Testimonials</h1>
+            <div class="section-content">
+                <div class="content-description">
+                    <div class="customer-quote">
+                        <p>“We love the grooming service! My baby always looks like he went to the salon after his
+                            appointments!”</p>
+                        <div class="profile-picture">
+                            <img src="/images/profile_1.png" alt="profile-picture" width="64" height="64">
+
+                        </div>
+                    </div>
+                    <div class="customer-quote">
+                        <p>“I know I can trust the staff to treat my dog like family when I go on long trips.”</p>
+                        <div class="profile-picture">
+                            <img src="/images/profile_2.png" alt="profile-picture" width="64" height="64">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h1 class="section-header">Get In Touch</h1>
+            <div class="section-content">
+                <form class="contact-form" action="#">
+                    <label for="txtFirstName">First Name</label>
+                    <input type="text" id="txtFirstName" name="txtFirstName" placeholder="Your name..">
+
+                    <label for="txtLastName">Last Name</label>
+                    <input type="text" id="txtLastName" name="txtLastname" placeholder="Your last name..">
+
+                    <label for="email">Email</label>
+                    <input type="text"  id="email" name="email" placeholder="Enter Email...">
+
+                    <label for="txtMessage">Message</label>
+                    <textarea id="txtMessage" name="txtMessage" placeholder="Write something.."
+                        style="height:200px"></textarea>
+
+                    <button class="submit-form">Send</button>
+                </form>
+            </div>
+        </section>
+    </div>
     <footer>
         <!-- footer stuff -->
     </footer>
+
+    <script src="/js/menu.js"></script>
 </body>
 
 </html>
