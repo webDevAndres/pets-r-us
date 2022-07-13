@@ -1,0 +1,14 @@
+#boardingPageHeader {
+  width: 100%;
+  height: auto;
+  position: relative;
+  background-image: url("/images/dog-hotel.jpeg");
+  background-position: center;
+  background-size: cover;
+}
+
+.boarding-details-list {
+  list-style-type: none;
+}
+
+

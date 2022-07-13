@@ -1,0 +1,74 @@
+#landingPageHeader {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-image: url("/images/LandingPageDog.jpeg");
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 136px;
+  }
+
+  #container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+  }
+
+  .content-image img {
+    width: 100%;
+    min-height: 360px;
+    box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.64);
+    object-fit: cover;
+  }
+
+
+
+  #displayHours p:nth-last-child(n + 2) {
+    margin-bottom: 16px;
+  }
+
+  .daily-hours {
+    padding-left: 32px;
+  }
+
+  .customer-quote {
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+
+  .profile-picture {
+    margin-top: 16px;
+  }
+  
+  .contact-form {
+    text-align: left;
+  }
+
+
+  @media only screen and (min-width: 600px) {
+    /* For tablets: */
+
+    #introDescription, #dogOfWeekDescription, #locationsDescription {
+      width: 50%;
+      margin: auto;
+    }
+  
+
+  }
+
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    #dogOfWeekDescription {
+      width: 100%;
+    }
+
+    .content-image img {
+      width: 360px;
+    }
+
+    .contact-form {
+      width: 40%;
+      margin: auto;
+    }
+  
+  }

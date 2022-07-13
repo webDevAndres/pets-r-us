@@ -1,0 +1,18 @@
+#groomingPageHeader {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-image: url("/images/LandingPageDog.jpeg");
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 136px;
+  }
+
+
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    #processDetails {
+        width: 50%;
+        margin: auto;
+      }
+  }

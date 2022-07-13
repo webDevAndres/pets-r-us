@@ -1,0 +1,10 @@
+body {
+    font-family: var(--body-font);
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  h1 {
+    font-family: var(--heading-font);
+  }

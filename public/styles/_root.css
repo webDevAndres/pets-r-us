@@ -1,0 +1,10 @@
+:root {
+    /* elements */
+    --primary: #7fbdf5;
+    /* hovers  */
+    --secondary: #cae2f7;
+    /* borders,backgrounds */
+    --tertiary: #606b75;
+    --heading-font: "Montserrat", sans-serif;
+    --body-font: "Source Sans Pro", sans-serif;
+  }
