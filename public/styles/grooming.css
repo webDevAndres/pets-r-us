@@ -1,0 +1,32 @@
+#groomingPageHeader {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-image: url("/images/LandingPageDog.jpeg");
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 136px;
+  }
+
+  .remove-bullets {
+      list-style-type: none;
+    }
+
+    .trainer-picture img{
+      width: 100%;
+      box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.64);
+      object-fit: cover;
+      margin: auto;
+    }
+
+    #dogTrainingSection {
+      background-color: #cae2f7;
+    }
+
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    #processDetails {
+        width: 50%;
+        margin: auto;
+      }
+  }

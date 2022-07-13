@@ -1,11 +1,4 @@
-:root {
-  /* elements */
-  --primary: #7fbdf5;
-  /* hovers  */
-  --secondary: #cae2f7;
-  /* borders,backgrounds */
-  --tertiary: #606b75;
-}
+
 
 /* Add a black background color to the top navigation */
 .mobile-menu {

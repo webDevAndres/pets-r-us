@@ -1,56 +1,15 @@
-<!-- Grooming page.
-Create your own Pets-R-Us grooming page.  
-Include the appropriate theme, styling, and write-up (minimum 250-words of actual fictious text; no lorem ipsum). 
-Required sections:
-Pricing (list at least four (4) grooming services with prices). 
--->
 
-<!DOCTYPE html>
-<html lang="en">
+<%- include('header.html') -%>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pets-R-Us | Grooming</title>
-
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Source+Sans+Pro:wght@300;700&display=swap"
-        rel="stylesheet">
-    <!-- font awesome icons -->
-    <script src="https://kit.fontawesome.com/8b2cac046d.js" crossorigin="anonymous"></script>
-    <!-- global styles -->
-    <link rel="stylesheet" href="/styles/site.css">
-    <link rel="icon" href="/images/icon.png">
-</head>
-
-<body>
-    <header>
-        <nav class="mobile-menu" id="navigationContainer">
-            <a href="index.html">Home</a>
-            <a href="#">Boarding</a>
-            <a href="grooming.html">Grooming</a>
-            <a href="#">Training</a>
-            <a href="#">Login</a>
-            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fas fa-bars" id="menuIcon"></i>
-            </a>
-        </nav>
-    </header>
     <div id="groomingPageHeader">
-        <img class="brand-logo centered" src="/images/Pets-R-Us.png" alt="logo" width="320" height="320">
-        <img class="landing-image " src="/images/LandingPageDog.jpeg" alt="dog">
+        <img class="brand-logo" src="/images/Pets-R-Us.png" alt="logo" width="320" height="320">
     </div>
     <div id="groomingContainer">
         <section id="groomingServices">
             <h1 class="section-header" id="groomingTitle">Grooming Services</h1>
             <div id="cardContainer">
                 <div class="card">
-                    <img src="/images/grooming-images/bath-brush.jpeg" alt="dog getting brushed">
+                    <img class="card-image" src="/images/grooming-images/bath-brush.jpeg" alt="dog getting brushed">
                     <div class="card-content">
                         <h2 class="card-title grooming-service-title">Bubble bath and coat brushing</h2>
                         <p>Bath, nail trim, ear cleaning, scissoring feet & pad shaving, sanitary trim, anal gland
@@ -59,7 +18,7 @@ Pricing (list at least four (4) grooming services with prices).
                     </div>
                 </div>
                 <div class="card">
-                    <img src="/images/grooming-images/bath-brush-deshedding.jpeg"
+                    <img class="card-image" src="/images/grooming-images/bath-brush-deshedding.jpeg"
                         alt="dog bath with deshedding shampoo">
                     <div class="card-content">
                         <h2 class="card-title grooming-service-title">Bubble bath and coat brushing with deShedding
@@ -70,7 +29,7 @@ Pricing (list at least four (4) grooming services with prices).
                     </div>
                 </div>
                 <div class="card">
-                    <img src="/images/grooming-images/bath-haircut.jpeg" alt="dog getting haircut">
+                    <img class="card-image" src="/images/grooming-images/bath-haircut.jpeg" alt="dog getting haircut">
                     <div class="card-content">
                         <h2 class="card-title grooming-service-title">Bubble bath with a blow-out</h2>
                         <p>Bath, deShedding shampoo & solution, nail trim, ear cleaning, extra brushing, blow-out,
@@ -79,7 +38,7 @@ Pricing (list at least four (4) grooming services with prices).
                     </div>
                 </div>
                 <div class="card">
-                    <img src="/images/grooming-images/bath-haircut-deshedding.jpeg"
+                    <img class="card-image" src="/images/grooming-images/bath-haircut-deshedding.jpeg"
                         alt="dog getting haircut with deshedding shampoo">
                     <div class="card-content">
                         <h2 class="card-title grooming-service-title">Bubble bath and haircut with light dematting</h2>
@@ -129,11 +88,5 @@ Pricing (list at least four (4) grooming services with prices).
             </div>
         </section>
     </div>
-    <footer>
-        <!-- footer stuff -->
-    </footer>
-
-    <script src="/js/menu.js"></script>
-</body>
-
-</html>
+    
+<%- include('footer.html') -%>
