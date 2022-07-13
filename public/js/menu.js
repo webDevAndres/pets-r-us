@@ -16,16 +16,16 @@ function highlightCurrentLink() {
   let homePage = document.querySelector('#navigationContainer');
 
   switch (currentPage) {
-    case '/index.html':
+    case '/':
       homePage.children[0].className = ' active'
       break;
-    case '/boarding.html':
+    case '/boarding':
       homePage.children[1].className = ' active'
       break;
-    case '/grooming.html':
+    case '/grooming':
       homePage.children[2].className = ' active'
       break;
-    case '/training.html':
+    case '/training':
       homePage.children[3].className = ' active'
       break;
   }
