@@ -71,7 +71,7 @@
     border-radius: initial;
     width: 100%;
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto auto;
     justify-content: flex-end;
   }
 
