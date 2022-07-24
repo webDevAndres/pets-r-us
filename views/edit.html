@@ -1,0 +1,19 @@
+<%- include('header.html') -%>
+
+    <div class="main-container">
+        <section id="edit">
+            <h1 class="section-header">Edit Your Profile</h1>
+            <div class="section-content">
+                <form class="contact-form" action="/edit" method="post">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required autofocus placeholder="Your name.." value="<% currentUser.username || '' %>">
+
+                    <label for="email">email</label>
+                    <input type="text" id="email" name="email" placeholder="Your email..." value="<% currentUser.email || '' %>">
+
+                    <input type="submit" value="update" class="submit-form">
+                </form>
+            </div>
+        </section>
+    </div>
+    <%- include('footer.html') -%>

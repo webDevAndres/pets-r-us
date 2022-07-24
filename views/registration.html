@@ -1,0 +1,44 @@
+<%- include('header.html') -%>
+
+    <div id="landingPageHeader">
+        <img class="" src="/images/Pets-R-Us.png" alt="logo" width="320" height="320">
+    </div>
+    <div class="main-container">
+        <section id="contact">
+            <h1 class="section-header">Registration Form</h1>
+            <div class="section-content">
+                <form class="contact-form" action="/registration" method="post">
+                    <label for="txtUserName">Username</label>
+                    <input type="text" id="txtUserName" name="txtUserName" required autofocus placeholder="Your name..">
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter a password..">
+
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" placeholder="Enter Email...">
+                    <input type="submit" value="Register" class="submit-form">
+                </form>
+            </div>
+        </section>
+        <section id="users">
+            <h1 class="section-header">Active Users</h1>
+            <div class="section-content">
+                <table id="activeUsers">
+                    <tr>
+                        <th>Email</th>
+                        <th>User Name</th>
+                    </tr>
+                <% users.forEach(function(user) { %>
+                    <tr>
+                        <td><a href="/users/<%= user.username %>">
+                            <%= user.name() %>
+                          </a></td>
+                          <td><%= user.email %></td>
+                    </tr>
+                    </div>
+                    <% }) %>
+                </table>
+            </div>
+        </section>
+    </div>
+    <%- include('footer.html') -%>

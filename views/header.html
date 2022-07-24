@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pets-R-Us | <%= appPage %></title>
+    <title>Pets-R-Us | <%= appPage %>
+    </title>
 
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,6 +20,7 @@
     <link rel="stylesheet" href="/styles/site.css">
     <link rel="icon" href="/images/icon.png">
 </head>
+
 <body>
     <header>
         <nav class="mobile-menu" id="navigationContainer">
@@ -26,10 +28,18 @@
             <a href="/boarding">Boarding</a>
             <a href="/grooming">Grooming</a>
             <a href="/training">Training</a>
-            <a href="#">Login</a>
+            <% if (currentUser) { %>
+                <a href="/profile">Hello, <%= currentUser.name() %></a>
+                <a href="/appointment">Appointments</a>
+                <a href="/logout">Logout</a> 
+            <%} else { %>
+                <a href="/login">Login</a>
+                <a href="/registration">Register</a>
+            <% } %> 
             <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fas fa-bars" id="menuIcon"></i>
             </a>
         </nav>
+
     </header>
