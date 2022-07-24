@@ -70,9 +70,9 @@
     transform: initial;
     border-radius: initial;
     width: 100%;
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto;
-    justify-content: flex-end;
+    display: inline-grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    height: auto;
   }
 
   .mobile-menu a {

@@ -40,8 +40,19 @@
     line-height: 24px;
   }
 
-  
-
+  table {
+    width: 100%;
+  }
+  th, td {
+    padding: 15px;
+  }
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  tr:nth-child(even) {
+    background-color: #D6EEEE;
+  }
   footer {
     height: 64px;
     background-color: var(--tertiary);
