@@ -7,9 +7,9 @@
         <section id="contact">
             <h1 class="section-header">Registration Form</h1>
             <div class="section-content">
-                <form class="contact-form" action="#">
-                    <label for="txUserName">First Name</label>
-                    <input type="text" id="txUserName" name="txUserName" placeholder="Your name..">
+                <form class="contact-form" action="/registration" method="post">
+                    <label for="txtUserName">Username</label>
+                    <input type="text" id="txtUserName" name="txtUserName" required autofocus placeholder="Your name..">
 
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" placeholder="Enter a password..">
@@ -23,24 +23,21 @@
         <section id="users">
             <h1 class="section-header">Active Users</h1>
             <div class="section-content">
-                <% if(users.length > 0 ) { %>
-                <table class="table">
+                <table id="activeUsers">
                     <tr>
-                        <th>Username</th>
-                        <th>Date joined</th>
+                        <th>Email</th>
+                        <th>User Name</th>
                     </tr>
-                    <tbody>
-                        <%users.foreach(function(user) { %>
-                        <tr>
-                            <td><%user.username %></td>
-                            <td>moment(user.joinedAt).format('MM-DD-YYYY') %></td>
-                        </tr>
-                        <% }) %>
-                    </tbody>
+                <% users.forEach(function(user) { %>
+                    <tr>
+                        <td><a href="/users/<%= user.username %>">
+                            <%= user.name() %>
+                          </a></td>
+                          <td><%= user.email %></td>
+                    </tr>
+                    </div>
+                    <% }) %>
                 </table>
-                <% } else {  %>
-                    <h3>Users have not been added to the MongoDB database. Add users!</h3>
-                <% } %>
             </div>
         </section>
     </div>

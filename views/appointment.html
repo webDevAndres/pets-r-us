@@ -1,0 +1,29 @@
+<%- include('header.html') -%>
+
+    <div id="landingPageHeader">
+        <img class="" src="/images/Pets-R-Us.png" alt="logo" width="320" height="320">
+    </div>
+    <div class="main-container">
+        <section id="contact">
+            <h1 class="section-header">Appointments</h1>
+            <div class="section-content">
+                <form class="contact-form" action="/registration" method="post">
+                    <label for="firstName">First name</label>
+                    <input type="text" id="firstName" name="firstName" required autofocus placeholder="Your name..">
+                    <label for="firstName">Last name</label>
+                    <input type="text" id="firstName" name="firstName" required autofocus placeholder="Your name..">
+
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" placeholder="Enter Email...">
+
+                    <select name="service" id="service" required>
+                        <option value="grooming">Grooming</option>
+                        <option value="boarding">Boarding</option>
+                        <option value="training">Training</option>
+                </select>
+                    <input type="submit" value="Request Appointment" class="submit-form">
+                </form>
+            </div>
+        </section>
+    </div>
+    <%- include('footer.html') -%>

@@ -1,0 +1,19 @@
+<%- include('header.html') -%>
+
+    <div class="main-container">
+        <section id="login">
+            <h1 class="section-header">Log in</h1>
+            <div class="section-content">
+                <form class="contact-form" action="/login" method="post">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required autofocus placeholder="Your name..">
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter a password..">
+
+                    <input type="submit" value="Log in" class="submit-form">
+                </form>
+            </div>
+        </section>
+    </div>
+    <%- include('footer.html') -%>
