@@ -1,10 +1,16 @@
+
+//  Title: index.js
+//  Author: Andres Macias
+//  Date: 07/24/22
+//  Description: This page contains the mongodb connection and paths
+
 let express = require('express');
 let mongoose = require('mongoose');
 let path = require('path');
 let bodyParser = require('body-parser');
 let cookieParser = require('cookie-parser');
-// let session = require('express-session');
-let session = require('cookie-session');
+let session = require('express-session');
+// let session = require('cookie-session');
 let flash = require('connect-flash');
 let passport = require('passport');
 let http = require('http');

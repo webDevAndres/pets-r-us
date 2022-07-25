@@ -1,5 +1,15 @@
-<%- include('header.html') %>
+<!-- 
+ Title: Pets-R-Us Assignment
+ Author: Andres Macias
+ Date: 07/24/22
+ Description: This page contains the user profile and appointment history 
+-->
 
+
+<%- include('header.html') %>
+<section id="boardingPageHeader">
+    <img src="/images/Pets-R-Us.png" alt="logo" width="320" height="320">
+</section>
 
     <div class="main-container">
         <section id="userProfile">
@@ -7,14 +17,16 @@
                 Profile
             </h1>
             <p>
-                <%= currentUser.username %>
+                username: <%= currentUser.username %>
             </p>
+           
             <% if (currentUser.email) { %>
                 <p>
-                    <%= currentUser.email %>
+                    email: <%= currentUser.email %>
                 </p>
                 <% } %>
                     <div class="section-content">
+                        <h2>Appointments History</h2>
                         <table id="activeUsers">
                             <tr>
                                 <th>First name</th>
