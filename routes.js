@@ -1,6 +1,7 @@
 let express = require('express');
 let passport = require('passport');
 let User = require('./models/users');
+let Appointment = require('./models/appointments');
 
 let router = express.Router();
 
@@ -51,6 +52,23 @@ router.get('/appointment', function (req, res) {
         appPage: 'Appointments',
         csrfToken: req.csrfToken()
     });
+});
+
+router.post('/appointment', ensureAuthenticated, function (req, res) {
+    let username = req.user;
+    let firstName = req.body.firstName;
+    let lastName = req.body.lastName;
+    let email = req.body.email;
+    let service = req.body.service;
+
+    let newAppointment = new Appointment({
+        userName: username,
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        service: service
+    });
+    newAppointment.save(next);
 });
 
 router.get('/registration', function (req, res) {
