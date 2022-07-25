@@ -24,10 +24,6 @@ app.set('view engine', 'html');
 app.use(helmet.xssFilter());
 
 
-
-
-
-
 // render static files
 let publicPath = path.resolve(__dirname, 'public');
 app.use(express.static(publicPath));
