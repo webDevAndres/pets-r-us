@@ -1,12 +1,12 @@
-@import url(_menu.css);
-@import url(_site-fonts.css);
-@import url(_root.css);
-@import url(_form.css);
-@import url(home.css);
-@import url(grooming.css);
-@import url(boarding.css);
-@import url(registration.css);
-@import url(_elements.css);
+@import url(./_menu.css);
+@import url(./_site-fonts.css);
+@import url(./_root.css);
+@import url(./_form.css);
+@import url(./home.css);
+@import url(./grooming.css);
+@import url(./boarding.css);
+@import url(./registration.css);
+@import url(./_elements.css);
 
 
 /* @media only screen and (min-width: 600px) { */
