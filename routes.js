@@ -1,3 +1,8 @@
+
+// Title: routes.js
+// Author: Andres Macias
+// Date: 07/24/22
+// Description: This page contains the routes for the pets-r-us project
 let express = require('express');
 let passport = require('passport');
 let User = require('./models/users');

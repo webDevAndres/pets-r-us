@@ -1,3 +1,9 @@
+
+// Title: setuppassport.js
+// Author: Andres Macias
+// Date: 07/24/22
+// Description: This page contains the setup for passport.js
+
 let passport = require('passport');
 let LocalStrategy = require('passport-local').Strategy;
 

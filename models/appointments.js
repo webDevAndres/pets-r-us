@@ -1,3 +1,9 @@
+
+// Title: appointments.js
+// Author: Andres Macias
+// Date: 07/24/22
+// Description: This page contains the schema for appointments
+
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt-nodejs');
 const SALT_FACTOR = 10;
