@@ -29,17 +29,22 @@
             <a href="/grooming">Grooming</a>
             <a href="/training">Training</a>
             <% if (currentUser) { %>
-                <a href="/profile">Hello, <%= currentUser.name() %></a>
-                <a href="/appointment">Appointments</a>
-                <a href="/logout">Logout</a> 
-            <%} else { %>
-                <a href="/login">Login</a>
-                <a href="/registration">Register</a>
-            <% } %> 
-            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fas fa-bars" id="menuIcon"></i>
-            </a>
+                <div class="dropdown">
+                    <a href="/profile">Hello, <%= currentUser.name() %></a>
+                    <div class="dropdown-content">
+                        <a href="/appointment">Appointments</a>
+                        <a href="/logout">Logout</a>
+                    </div>
+                </div>
+
+                <%} else { %>
+                    <a href="/login">Login</a>
+                    <a href="/registration">Register</a>
+                    <% } %>
+                        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                            <i class="fas fa-bars" id="menuIcon"></i>
+                        </a>
         </nav>
 
     </header>

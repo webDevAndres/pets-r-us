@@ -5,6 +5,7 @@
             <h1 class="section-header">Edit Your Profile</h1>
             <div class="section-content">
                 <form class="contact-form" action="/edit" method="post">
+                    <input name="_csrf" value="<%= csrfToken %>" type="hidden">
                     <label for="username">Username</label>
                     <input type="text" id="username" name="username" required autofocus placeholder="Your name.." value="<% currentUser.username || '' %>">
 
