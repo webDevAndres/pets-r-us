@@ -8,6 +8,7 @@
             <h1 class="section-header">Registration Form</h1>
             <div class="section-content">
                 <form class="contact-form" action="/registration" method="post">
+                    <input name="_csrf" value="<%= csrfToken %>" type="hidden">
                     <label for="txtUserName">Username</label>
                     <input type="text" id="txtUserName" name="txtUserName" required autofocus placeholder="Your name..">
 

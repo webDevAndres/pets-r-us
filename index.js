@@ -10,6 +10,9 @@ let http = require('http');
 let setUpPassport = require('./setuppassport');
 let routes = require('./routes');
 let app = express();
+let helmet = require('helmet');
+let csurf = require('csurf');
+
 
 mongoose.connect('mongodb://localhost:27017/test');
 setUpPassport();
@@ -18,6 +21,11 @@ app.set('port', process.env.PORT || 3000);
 app.set('views', path.resolve(__dirname, 'views'));
 app.engine('.html', require('ejs').__express);
 app.set('view engine', 'html');
+app.use(helmet.xssFilter());
+
+
+
+
 
 
 // render static files
@@ -35,6 +43,7 @@ app.use(session({
 app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(csurf());
 app.use(routes);
 
 

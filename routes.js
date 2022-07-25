@@ -22,7 +22,6 @@ router.use(function (req, res, next) {
 });
 
 
-
 router.get('/', function (req, res) {
     res.render('index', {
         appPage: 'Home'
@@ -49,7 +48,8 @@ router.get('/training', function (req, res) {
 
 router.get('/appointment', function (req, res) {
     res.render('appointment', {
-        appPage: 'Appointments'
+        appPage: 'Appointments',
+        csrfToken: req.csrfToken()
     });
 });
 
@@ -58,7 +58,8 @@ router.get('/registration', function (req, res) {
         if (err) { return next(err); }
         res.render('registration', {
             appPage: 'Register',
-            users: users
+            users: users,
+            csrfToken: req.csrfToken()
         });
     });
 });
@@ -91,7 +92,8 @@ router.post('/registration', function (req, res, next) {
 
 router.get('/login', function (req, res) {
     res.render('login', {
-        appPage: 'Login'
+        appPage: 'Login',
+        csrfToken: req.csrfToken()
     });
 });
 
@@ -121,7 +123,8 @@ router.get('/profile', ensureAuthenticated, function (req, res) {
 
 router.get('/edit', ensureAuthenticated, function (req, res) {
     res.render('edit', {
-        appPage: 'Edit'
+        appPage: 'Edit',
+        csrfToken: req.csrfToken()
     });
 });
 
