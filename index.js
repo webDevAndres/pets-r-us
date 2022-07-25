@@ -14,7 +14,7 @@ let helmet = require('helmet');
 let csurf = require('csurf');
 
 
-mongoose.connect('mongodb://localhost:27017/test');
+mongoose.connect('mongodb+srv://andres:web340@buwebdev-cluster-1.pldlt.mongodb.net/test');
 setUpPassport();
 app.set('port', process.env.PORT || 3000);
 
