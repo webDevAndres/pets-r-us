@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "grunt": "grunt"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,9 @@
     "passport-local": "^1.0.0"
   },
   "devDependencies": {
+    "grunt": "^1.5.3",
+    "grunt-cli": "^1.4.3",
+    "grunt-contrib-imagemin": "^4.0.0",
     "nodemon": "^2.0.18"
   },
   "engines": {
